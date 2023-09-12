@@ -1,5 +1,7 @@
 #circle class
 
+import pygame
+
 #1inport packages
 
 #2 Define the colours Red, Green
@@ -7,10 +9,12 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-class Circle():
+class S_Circle():
 #3 Define the class object
-    def __init__(self, window, maxWidth, maxHeight):
+    def __init__(self, window, maxWidth, maxHeight, color, radius, x, y):
         self.window = window
+        self.maxwidth = maxWidth
+        self.maxHeight = maxHeight
         self.color = color
         self.radius = radius
         self.x = x
