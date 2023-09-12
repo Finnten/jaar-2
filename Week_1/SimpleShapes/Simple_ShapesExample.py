@@ -36,8 +36,8 @@ shapesList.append(TShape)
 SShape = S_Square(window, Width=33, Height=33, Color=RED, X=300, Y=300)
 shapesList.append(SShape)
 
-#CShape = S_Circle(window, Color=RED, X=70, Y=70, radius=50)
-#shapesList.append(CShape)
+CShape = S_Circle(window, Color=RED, X=70, Y=70, radius=50)
+shapesList.append(CShape)
 
 oStatusLine = pygwidgets.DisplayText(window, (4,4),'Click on shapes', fontSize=28)
 

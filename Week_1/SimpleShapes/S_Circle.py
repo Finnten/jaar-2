@@ -11,10 +11,10 @@ BLUE = (0, 0, 255)
 
 class S_Circle():
 #3 Define the class object
-    def __init__(self, window, maxWidth, maxHeight, Color, radius, X, Y):
+    def __init__(self, window, Color, radius, X, Y):
         self.window = window
-        self.maxwidth = maxWidth
-        self.maxHeight = maxHeight
+        #self.maxwidth = maxWidth
+        #self.maxHeight = maxHeight
         self.color = Color
         self.radius = radius
         self.x = X
@@ -37,4 +37,4 @@ class S_Circle():
         return theArea
 #7 Define the method that draws the circle with a random colour
     def draw(self):
-        pygame.draw.Circle(self.window, self.color, (self.x, self.y), self.radius)
+        pygame.draw.circle(self.window, self.color, (self.x, self.y), self.radius)
