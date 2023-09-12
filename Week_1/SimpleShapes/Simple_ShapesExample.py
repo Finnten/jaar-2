@@ -32,9 +32,12 @@ shapesList.append(RShape)
 
 TShape = S_Triangle(window, Width=100, Height=100, Color=GREEN, X=200, Y=200)
 shapesList.append(TShape)
+#               self, window, maxWidth, maxHeight, Color, radius, x, y
+SShape = S_Square(window, Width=33, Height=33, Color=RED, X=300, Y=300)
+shapesList.append(SShape)
 
-CShape = S_Circle(window, radius=75, Color=RED, X=300, Y=250)
-shapesList.append(TShape)
+#CShape = S_Circle(window, Color=RED, X=70, Y=70, radius=50)
+#shapesList.append(CShape)
 
 oStatusLine = pygwidgets.DisplayText(window, (4,4),'Click on shapes', fontSize=28)
 

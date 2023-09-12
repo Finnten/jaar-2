@@ -11,18 +11,17 @@ BLUE = (0, 0, 255)
 
 class S_Circle():
 #3 Define the class object
-    def __init__(self, window, maxWidth, maxHeight, color, radius, x, y):
+    def __init__(self, window, maxWidth, maxHeight, Color, radius, X, Y):
         self.window = window
         self.maxwidth = maxWidth
         self.maxHeight = maxHeight
-        self.color = color
+        self.color = Color
         self.radius = radius
-        self.x = x
-        self.y = y
+        self.x = X
+        self.y = Y
         
-
         self.rect = pygame.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
-        self.shapeRype = 'Circle'
+        self.shapeType = 'Circle'
 #4 Define the methods to check if the location clicked is inside that circle
     def clickedInside(self, mousePoint):
         clicked = self.rect.collidepoint(mousePoint)

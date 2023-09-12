@@ -9,14 +9,14 @@ BLUE = (0, 0, 255)
 
 class S_Square():
 
-    def __init__(self, window, Width, Height, Color, X, Y):
+    def __init__(self, window, Width, Color, X, Y):
         self.window = window
         self.width = Width
         self.height = Width
         self.color = Color
         self.x = X
         self.y = Y
-        self.SQ = pygame.Rect(self.x, self.y, self.width,self.height)
+        self.rect = pygame.Rect(self.x, self.y, self.width,self.height)
         self.shapeType = 'Square'
         
     def clickedInside(self, mousePoint):
