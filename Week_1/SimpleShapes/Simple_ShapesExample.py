@@ -4,6 +4,7 @@
 
 import pygame
 import sys
+import random
 from pygame.locals import *
 from S_Rectangle import *
 from S_Circle import *  # already ailable but the implementation left to you
@@ -17,6 +18,8 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
 
+colorlist = [RED, GREEN, BLUE]
+
 # Set up the window
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
@@ -27,7 +30,7 @@ shapesList = [] # I keep a shapesList but the init of the objects changes, in fa
 # Named calling is using the exact name like Color=Green
 # the parameter list for simpleshapes is (window, Width, Height, Color, X, Y) to be filled in here    
 
-RShape = S_Rectangle(window, Width=50, Height=150, Color=BLUE, X=100, Y=100)
+RShape = S_Rectangle(window, Width=random.randint(20,200), Height=random.randint(20,200), Color=random.choice(colorlist), X=random.randint(40,600), Y=random.randint(40,600))
 shapesList.append(RShape)
 
 TShape = S_Triangle(window, Width=100, Height=100, Color=GREEN, X=200, Y=200)
@@ -36,7 +39,7 @@ shapesList.append(TShape)
 SShape = S_Square(window, Width=33, Height=33, Color=RED, X=300, Y=300)
 shapesList.append(SShape)
 
-CShape = S_Circle(window, Color=RED, X=70, Y=70, radius=50)
+CShape = S_Circle(window, Color=RED, X=500, Y=300, radius=50)
 shapesList.append(CShape)
 
 oStatusLine = pygwidgets.DisplayText(window, (4,4),'Click on shapes', fontSize=28)

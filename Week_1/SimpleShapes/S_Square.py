@@ -9,7 +9,7 @@ BLUE = (0, 0, 255)
 
 class S_Square():
 
-    def __init__(self, window, Width, Height, Color, X, Y):
+    def __init__(self, window, Width, Color, X, Y):
         self.window = window
         self.width = Width
         self.height = Width

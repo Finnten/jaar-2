@@ -13,8 +13,6 @@ class S_Circle():
 #3 Define the class object
     def __init__(self, window, Color, radius, X, Y):
         self.window = window
-        #self.maxwidth = maxWidth
-        #self.maxHeight = maxHeight
         self.color = Color
         self.radius = radius
         self.x = X
