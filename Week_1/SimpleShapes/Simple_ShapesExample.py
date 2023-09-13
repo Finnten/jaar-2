@@ -18,7 +18,7 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
 
-colorlist = [RED, GREEN, BLUE]
+colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
 
 # Set up the window
 pygame.init()
@@ -30,16 +30,16 @@ shapesList = [] # I keep a shapesList but the init of the objects changes, in fa
 # Named calling is using the exact name like Color=Green
 # the parameter list for simpleshapes is (window, Width, Height, Color, X, Y) to be filled in here    
 
-RShape = S_Rectangle(window, Width=random.randint(20,200), Height=random.randint(20,200), Color=random.choice(colorlist), X=random.randint(40,600), Y=random.randint(40,600))
+RShape = S_Rectangle(window, Width=random.randint(20,200), Height=random.randint(20,200), Color=random.choice(colorlist), X=random.randint(100,500), Y=random.randint(100,400))
 shapesList.append(RShape)
 
-TShape = S_Triangle(window, Width=100, Height=100, Color=GREEN, X=200, Y=200)
+TShape = S_Triangle(window, Width=random.randint(20,200), Height=random.randint(20,200), Color=random.choice(colorlist), X=random.randint(40,600), Y=random.randint(100,400))
 shapesList.append(TShape)
 #               self, window, maxWidth, maxHeight, Color, radius, x, y
-SShape = S_Square(window, Width=33, Height=33, Color=RED, X=300, Y=300)
+SShape = S_Square(window, Width=random.randint(20,200), Color=random.choice(colorlist), X=random.randint(40,600), Y=random.randint(100,400))
 shapesList.append(SShape)
 
-CShape = S_Circle(window, Color=RED, X=500, Y=300, radius=50)
+CShape = S_Circle(window, Color=random.choice(colorlist), X=random.randint(40,600), Y=random.randint(100,400), radius=random.randint(20,100))
 shapesList.append(CShape)
 
 oStatusLine = pygwidgets.DisplayText(window, (4,4),'Click on shapes', fontSize=28)
