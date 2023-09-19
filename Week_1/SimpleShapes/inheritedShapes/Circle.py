@@ -11,11 +11,24 @@ import math
 #3 Define the class object
 
 class Circle(Shape):
-    def __init__(self, window, shapeType, maxWidth, maxHeight, color):
-        super().__init__(window, 'Circle', maxWidth, maxHeight, color)
+
+    RED = (255, 0, 0)
+    GREEN = (0, 255, 0)
+    BLUE = (0, 0, 255)
+    PURPLE = (255,0,255)
+    YELLOW = (255,255,0)
+    CYAN = (0,255,255)
+    MAGENTA = (255,0,255)
+    BLACK = (0,0,0)
+
+    colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
+    
+    def __init__(self, window, shapeType, maxWidth, maxHeight):
+        super().__init__(window, 'Circle', maxWidth, maxHeight)
         self.shapeType = shapeType
 
         # randomize the radius, x and y local
+        self.color = random.choice(colorlist)
         self.radius = random.randint(10,50)
         self.x = random.randint(100,500)
         self.y = random.randint(100,400)

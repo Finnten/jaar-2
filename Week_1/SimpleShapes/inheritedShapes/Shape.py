@@ -18,17 +18,17 @@ BLACK = (0,0,0)
 colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
 
 color=random.choice(colorlist)
-maxWidth=random.randint(100,500)
-maxHeight=random.randint(100,400)  
+maxWidth=random.randint(10,100)
+maxHeight=random.randint(10,100)  
 
 #3 Define the class object
 class Shape(ABC):
-    def __init__(self, window, shapeType, maxWidth, maxHeight, color):
+    def __init__(self, window, shapeType, maxWidth, maxHeight):
         self.shapeType = shapeType
         self.window = window
         self.maxWidth = maxWidth
         self.maxHeight = maxHeight
-        self.color = color
+        
         
     
 #4 Define the methods to check if the location clicked is inside that circle
