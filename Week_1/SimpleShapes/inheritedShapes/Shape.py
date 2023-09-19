@@ -23,11 +23,12 @@ maxHeight=random.randint(10,100)
 
 #3 Define the class object
 class Shape(ABC):
-    def __init__(self, window, shapeType, maxWidth, maxHeight):
+    def __init__(self, window, shapeType, maxWidth, maxHeight,color):
         self.shapeType = shapeType
         self.window = window
         self.maxWidth = maxWidth
         self.maxHeight = maxHeight
+        self.color = color
         
         
     
