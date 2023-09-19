@@ -17,14 +17,15 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
 
-colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
 
 # Set up the window
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 clock = pygame.time.Clock()
 
-shapesList = ["circle", "triangle", "square"] # I keep a shapesList but the init of the objects changes, in fact only 3 shapes to start with
+circle = Circle(window, "Circle", WINDOW_WIDTH, WINDOW_HEIGHT, color)
+
+shapesList = [circle] # I keep a shapesList but the init of the objects changes, in fact only 3 shapes to start with
 
 # Named calling is using the exact name like Color=Green
 # the parameter list for simpleshapes is (window, Width, Height, Color, X, Y) to be filled in here    
