@@ -11,6 +11,7 @@ YELLOW = (255,255,0)
 CYAN = (0,255,255)
 MAGENTA = (255,0,255)
 BLACK = (0,0,0)
+colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
 
 class S_Triangle():  
     # Named calling is using the exact name like Color=Green
