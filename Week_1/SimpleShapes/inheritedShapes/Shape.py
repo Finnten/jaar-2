@@ -1,4 +1,5 @@
-# 1inport packages
+
+#1 inport packages
 
 from abc import ABC, abstractmethod
 import pygame
@@ -16,16 +17,15 @@ BLACK = (0,0,0)
 
 colorlist = [RED, GREEN, BLUE, PURPLE, YELLOW, BLACK, MAGENTA, CYAN]
 
-#,maxWidth, maxHeight)  
 
 #3 Define the class object
-class S_Circle():
-    def __init__(self, window, shapeType):
+class Shape(ABC):
+    def __init__(self, window, color, shapeType, maxWidth, maxHeight):
         self.shapeType = shapeType
         self.window = window
-        self.color = random.choice(colorlist)
-        self.maxWidth = random.randint(20,200)
-        self.maxHeight = random.randint(20,200)
+        self.maxWidth = maxWidth
+        self.maxHeight = maxHeight
+        self.color = color
         self.x = random.randint(100,500)
         self.y = random.randint(100,400)
         
@@ -33,11 +33,10 @@ class S_Circle():
 #4 Define the methods to check if the location clicked is inside that circle
     @abstractmethod
     def clickedInside(self, mousePoint):
-        clicked = self.rect.collidepoint(mousePoint)
         raise NotImplementedError('clickedInside must be defined in subclasses')
-        return clicked
     
 #5 Define the method that returns the indormation clicked is a circle
+    @abstractmethod
     def getType(self):
         return self.shapeType
     
@@ -46,5 +45,5 @@ class S_Circle():
         theArea = self.maxWidth * self.maxHeight
         return theArea
 #7 Define the method that draws the circle with a random colour
-    def draw(self):
-        pygame.draw.rect(self.window, self.color, (self.x, self.y, self.maxWidth, self.maxHeight))
+    #def draw(self):
+        #pygame.draw.rect(self.window, self.color, (self.x, self.y, self.maxWidth, self.maxHeight))
